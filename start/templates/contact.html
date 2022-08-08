@@ -605,11 +605,17 @@
 <div class="binary-logo">
 
 </div>
-<div class="note-wrapper">
-<h5 class="note-title"><strong>TO : </strong><br>L.MARAIS<strong><br>Bank: </strong><br>CAPITEC BANK<br><strong>Phone Numbers: </strong><br>+278 3383 2344<br><strong>Account: </strong><br>1707988747<br><strong>Amount: </strong><br>R50</h5>
-</div>
-</div>
 {% block content %}
+<div class="note-wrapper">
+<h5 class="note-title"><strong>TO : </strong><br>{{lwrAlp}}
+    <strong><br>Bank: </strong><br>{{uprAlp}}<br>
+    <strong>Phone Numbers: </strong><br>{{numrAlp}}<br>
+    <strong>Account: </strong><br>{{AccAlp}}<br>
+    <strong name=" money">Amount: </strong><br>{{amoAlp}}  
+  
+</div>
+</div>
+
 
 <form action="{{ url_for('contact') }}" method="POST">
 
