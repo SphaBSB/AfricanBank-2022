@@ -611,11 +611,11 @@
 <div id="container">
 <h4 class="title-text">Payment Successful</h4>
 
-
+{% block content %}
 <div class="note-wrapper">
 <h5 class="note-title">
 
-    <strong style="color: blue; font-size: 15px" ><br>Paid :</strong><br>R 50 
+    <strong style="color: blue; font-size: 15px" ><br>Paid :</strong><br>{{amoAlp}}
     <br><strong style="color: blue; font-size: 15px" >Transaction ID : </strong><br><div style="color: rgb(255, 2, 2);"class="subtitle-text" id="myNumber"></div>
     <br><strong style="color: blue; font-size: 15px" >Date : </strong><br><p style="color: rgb(0, 0, 0);"class="subtitle-text date"></p>
 </h5>
@@ -658,7 +658,7 @@
 
                    
  
-   
+{% endblock %}  
 
 
 <script>
