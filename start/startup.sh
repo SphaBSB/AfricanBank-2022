@@ -1,7 +1,7 @@
 #!/bin/sh
 RED='\033[0;31m'
 NOCOLOR='\033[0m'
-YELLOW ='\033[1;34m-'
+YELLOW ='\033[0,32m-'
 
 echo "${RED}WARNING: ${NOCOLOR}This script will install PYTHON AND add it as an apt source."
 echo ""
