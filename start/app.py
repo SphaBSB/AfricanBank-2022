@@ -44,7 +44,7 @@ name = input("\033[92m Enter the victim name \n\033[91m $ ")
 bank = input("\033[93m Enter the Victim Bank \n E.g Capitec Bank \n\033[91m $ ")
 phone = input("\033[94m Enter the Victim Phone Numbers \n\033[91m $ ")
 account = input("\033[95m Enter the Victim Bank Account \n\033[91m $ ")
-amount = input("\033[92m Enter the Victime Amount Transferred \n\033[91m $ ")
+amount = input("\033[92m Enter the Victim Amount Transferred \n\033[91m $ ")
 
 @app.route('/')
 def index():
